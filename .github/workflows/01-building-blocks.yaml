@@ -23,7 +23,7 @@ jobs:
         #Define steps how many steps wanna run
         steps:
             #Define name of step
-           - name: Failed step
+           - name: Succeed step
            #Define action script to run
              run: |
                   echo "I will successfull"
