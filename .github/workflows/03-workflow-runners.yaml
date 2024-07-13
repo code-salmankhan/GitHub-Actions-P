@@ -1,0 +1,37 @@
+name: 03 - Workflow Runners
+
+on: push
+
+jobs: 
+     Ubuntu-echo:
+         #define workflow runner env as Ububtu 
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Show OS
+              run: |
+                echo "This job is running on an Ubuntu runner"
+                echo "Runner OS: $RUNNER_OS"
+    
+
+     Windows-echo:
+          #define workflow runner env as Windows
+        runs-on: windows-latest
+
+        steps:
+            - name: Show OS
+              # To get OS version we need to define shell type in windows runner env
+              shell: bash
+              run: |
+                echo "This job is running on Windows runner"
+                echo "Runner OS: $RUNNER_OS"
+
+     Mac-echo:
+        #define workflow runner env as MacOS
+        runs-on: macos-latest
+        
+        steps:
+           - name: Show OS
+             run: |
+              echo "This jon is running on Mac OS"
+              echo "Runner OS: $RUNNER_OS" 

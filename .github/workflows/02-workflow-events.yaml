@@ -1,6 +1,6 @@
 name: 02 - Workflow Events
 
-#Let's add multiple options to tigger workflow
+#Let's add multiple options to tigger workflow, there is no on push
 on: workflow_dispatch        
 
 jobs:
