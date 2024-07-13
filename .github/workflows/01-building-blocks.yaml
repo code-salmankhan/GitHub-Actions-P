@@ -26,8 +26,8 @@ jobs:
            - name: Failed step
            #Define action script to run
              run: |
-                  echo "I will fail"
-                  exit 1
+                  echo "I will successfull"
+                  exit 0
             #Define name of second job      
            - name: Say goodbye
            #Define action script to run
