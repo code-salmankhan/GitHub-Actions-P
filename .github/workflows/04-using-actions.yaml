@@ -7,9 +7,16 @@ jobs:
          runs-on: ubuntu-latest
          #check out the code from repository
          steps:
+            #Step 1
            - name: Checkout Code
              uses: actions/checkout@v4
-           - name: Printing folders
-             run: ls
+            #Step 2 
+           - name: Setup Node
+             uses: actions/setup-node@v3
+             with:
+                node-version: '22.x'
+            #Step 3    
+           - name: Install Dependencies
+             run: npm ci   
              
 
