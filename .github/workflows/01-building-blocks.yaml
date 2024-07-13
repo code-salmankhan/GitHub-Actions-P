@@ -17,7 +17,7 @@ jobs:
             #Define action script or github action 
              run: echo "Hello Salman" 
     #job second
-    echo-goodbye:
+   echo-goodbye:
         #Define Execution env
         runs-on: ubuntu-latest 
         #Define steps how many steps wanna run
