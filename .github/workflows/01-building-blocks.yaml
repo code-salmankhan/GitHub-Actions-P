@@ -1,13 +1,34 @@
+#Defined workflow name
 name: 01 - Building- Blocks
 
+#Defined when it get trigger condition like on when "push"
 on: push
 
+#Defined job which we can define singal or multiple, we are defining 2 jobs they will get trigger parallel
 jobs:
-   my-first-job:
+   #job one  
+   echo-hello:
+        #Define Execution env
         runs-on: ubuntu-latest
+        #Define steps how many steps wanna run
         steps:
-           - run : echo "Hello Salman" 
-   my-second-jobs:
+            #Define first step name in job echo-hello 
+           - name: Say hello 
+            #Define action script or github action 
+             run: echo "Hello Salman" 
+    #job second
+    echo-goodbye:
+        #Define Execution env
         runs-on: ubuntu-latest 
+        #Define steps how many steps wanna run
         steps:
-           - run : echo "Bye" 
+            #Define name of step
+           - name: Failed step
+           #Define action script to run
+             run: |
+                  echo "I will fail"
+                  exit 1
+            #Define name of second job      
+           - name: Say goodbye
+           #Define action script to run
+             run: echo "Goodbye"      
