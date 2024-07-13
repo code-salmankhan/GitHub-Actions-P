@@ -35,7 +35,7 @@ jobs:
                - name: Retrieve Variable
                  #using var contexts
                  run: |
-                   echo "Variable name ; ${{vars.MY_VAR}}"
+                   echo "Variable name : ${{vars.MY_VAR}}"
                 
                - name: Print Env Variable 1
                 #overwriting env context inside steps
