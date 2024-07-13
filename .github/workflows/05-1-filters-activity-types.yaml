@@ -14,4 +14,4 @@ jobs:
       
       steps:
          - name: Activity Type
-           run: echo "Running whenever pull request is opned or synchronize and base branch is main" 
+           run: echo "Running whenever pull request is opned or synchronize and base branch is main." 
